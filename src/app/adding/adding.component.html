@@ -1,0 +1,25 @@
+<button (click)="addNew('addS')">add student </button>
+<button (click)="addNew('addM')">add material </button>
+
+<div [ngSwitch]="addType">
+    <div *ngSwitchCase="'addS'">
+        
+            <p>name : </p>
+            <input [(ngModel)]="Sname">
+            <p>major : </p>
+            <input [(ngModel)]="Smajor">
+            <button (click)="finaladd('Sname','Smajor')">add</button>
+        
+
+    </div>
+    <div *ngSwitchCase="'addM'">
+        
+            <p>name : </p>
+            <input [(ngModel)]="Mname">
+            <p>registration number  : </p>
+            <input [(ngModel)]="MRNum">
+            <button  (click)="finaladd(Mname,MRNum)">add</button>
+
+       
+    </div>
+</div>

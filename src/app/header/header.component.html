@@ -1,0 +1,17 @@
+<h1>student and materials</h1>
+<button style="background-color: bisque; margin : 10px;"(click)="appearList('studentA')">student</button>
+<button style="background-color: bisque; margin : 10px;"(click)="appearList('materialB')">materials</button>
+<button style="background-color: bisque; margin : 10px;"(click)="appearList('addC')">add</button>
+
+<div [ngSwitch]="cType">
+    <div *ngSwitchCase="'studentA'">
+        <app-student></app-student>
+    </div>
+    <div *ngSwitchCase="'materialB'">
+        <app-materials></app-materials>
+    </div>  
+    <div *ngSwitchCase="'addC'">
+        <app-adding></app-adding>
+    </div>
+</div>
+
